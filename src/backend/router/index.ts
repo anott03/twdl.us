@@ -32,6 +32,25 @@ export const appRouter = trpc
         generatedUrl: `localhost:3000/u/${dbEntry.id}`
       }
     }
+  })
+  .query('get-url', {
+    input: z.object({ id: z.any() }),
+    async resolve({ input }) {
+      // find the entry with id input.id
+      let foundEntry = await prisma.url.findUnique({ where: { ...input }})
+
+      if (foundEntry) {
+        return {
+          success: true,
+          redirectUrl: foundEntry.url
+        }
+      }
+
+      return {
+        success: false,
+        errorMsg: "Invalid ID"
+      }
+    }
   });
 
 // export type definition of API
