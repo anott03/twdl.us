@@ -1,21 +1,21 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import { trpc } from '@/utils/trpc';
 
 const Home: NextPage = () => {
-  return (
-    <div className="text-2xl h-screen w-screen flex flex-col p-96">
-      <div className='text-gray-800 w-full h-full flex flex-col'>
-        <p className='text-gray-100'>Enter a URL:</p>
-        <div className='w-full flex flex-row bg-red-800 p-1 justify-between'>
-          <div className='flex-1 bg-green-100'>
-            <input type="text text-gray-800 border-none w-full" />
-          </div>
-          <button className="text-gray-100 flex-none">Go</button>
-        </div>
-      </div>
+  const { data, isLoading } = trpc.useQuery(['hello', { text: 'amitav' }]);
+
+  return (<>
+    <Head>
+      <title>TWDL</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
+    </Head>
+    <div className="text-7xl h-screen w-screen flex flex-col justify-center text-center">
+      Hello
     </div>
-  )
+  </>)
 }
 
 export default Home
