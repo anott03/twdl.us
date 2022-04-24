@@ -9,15 +9,11 @@ const UrlShortener: NextPage = () => {
     <Head>
       <title>Url Shortener | TWDL</title>
     </Head>
-    <div className="text-2xl h-screen w-screen flex flex-col p-96">
-      <div className='text-gray-800 w-full h-full flex flex-col'>
-        <p className='text-gray-100'>Enter a URL:</p>
-        <div className='w-full flex flex-row bg-red-800 p-1 justify-between'>
-          <div className='flex-1 bg-green-100'>
-            <input type="text text-gray-800 border-none w-full" />
-          </div>
-          <button className="text-gray-100 flex-none">Go</button>
-        </div>
+    <div className="text-2xl h-screen w-screen flex flex-col justify-center items-center">
+      <div className='text-gray-800 flex flex-col border-solid border-2 border-gray-200 p-5 justify-between max-w-2xl max-h-44 w-full h-full'>
+        <p className='text-gray-100 text-2xl'>Enter a URL:</p>
+        <input type="text text-gray-800 border-none w-full" style={{padding: '0 0.5rem'}}/>
+        <button className="text-gray-100 bg-blue-400 flex-none">Go</button>
       </div>
     </div>
   </>)
