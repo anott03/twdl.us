@@ -12,7 +12,7 @@ const UrlShortener: NextPage = () => {
     e.preventDefault();
     const url = encodeURI(e.target.urlInput.value);
 
-    await generateUrlMutation.mutate({ url });
+    generateUrlMutation.mutate({ url });
     console.log(generateUrlMutation.data);
     setUrlReady(true);
   }
