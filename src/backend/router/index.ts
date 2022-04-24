@@ -21,7 +21,7 @@ export const appRouter = trpc
       url: z.string()
     }),
     async resolve({ input }) {
-      const dbEntry = await prisma.url.create({
+      const dbEntry = await prisma.urls.create({
         data: {
           ...input
         }
@@ -37,7 +37,7 @@ export const appRouter = trpc
     input: z.object({ id: z.any() }),
     async resolve({ input }) {
       // find the entry with id input.id
-      let foundEntry = await prisma.url.findUnique({ where: { ...input }})
+      let foundEntry = await prisma.urls.findUnique({ where: { ...input }})
 
       if (foundEntry) {
         return {
