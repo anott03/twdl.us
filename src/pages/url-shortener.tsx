@@ -4,7 +4,6 @@ import { trpc } from '@/utils/trpc';
 import { useState } from 'react';
 
 const UrlShortener: NextPage = () => {
-  // const { data, isLoading } = trpc.useQuery(['hello', { text: 'amitav' }]);
   const generateUrlMutation = trpc.useMutation(['generate-url']);
   let [ urlReady, setUrlReady ] = useState(false);
 
