@@ -4,18 +4,6 @@ import { prisma } from '@/backend/utils/prisma';
 
 export const appRouter = trpc
   .router()
-  .query('hello', {
-    input: z
-      .object({
-        text: z.string().nullish(),
-      })
-      .nullish(),
-    resolve({ input }) {
-      return {
-        greeting: `hello ${input?.text ?? 'world'}`,
-      };
-    },
-  })
   .mutation('generate-url', {
     input: z.object({
       url: z.string()
