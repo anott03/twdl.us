@@ -27,7 +27,6 @@ const Shortener: () => JSX.Element = () => {
 
   return (
     <div className="w-screen h-screen p-5 bg-slate-800 flex flex-col justify-center items-center">
-      <h1 className="text-2xl text-white">Url Shortener</h1>
       <div className="p-2 border-solid border-[1px] border-white flex flex-row w-full max-w-lg">
         <input
           className="bg-inherit text-white py-5 px-3"
