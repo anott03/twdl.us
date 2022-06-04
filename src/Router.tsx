@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/landing/Landing';
+import Shortener from './pages/url-shortener/Shortener';
 
 export default function Router() {
   return <BrowserRouter>
@@ -7,6 +8,10 @@ export default function Router() {
       <Route
         path="/"
         element={<Landing />}
+      />
+      <Route
+        path="/url-shortener"
+        element={<Shortener />}
       />
     </Routes>
   </BrowserRouter>
