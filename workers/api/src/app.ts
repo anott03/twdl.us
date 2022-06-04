@@ -3,7 +3,8 @@ import { customHeader } from "./middleware/customHeader";
 import { renderErrorsAsJSON } from "sunder/middleware/render";
 import { registerRoutes } from "./routes";
 import { renderErrorsAsHTML } from "./middleware/htmlErrors";
-import { Env } from "./bindings";
+import { Env } from "@/bindings";
+import { handlePreflightRequests, setCorsHeaders } from "./middleware/cors";
 
 export function createApp() {
     const app = new Sunder<Env>();
@@ -11,6 +12,8 @@ export function createApp() {
     registerRoutes(router);
 
     app.use(customHeader);
+    app.use(setCorsHeaders);
+    app.use(handlePreflightRequests);
     
     app.use(renderErrorsAsHTML);
     app.use(renderErrorsAsJSON);
