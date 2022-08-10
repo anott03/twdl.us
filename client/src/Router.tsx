@@ -10,7 +10,7 @@ export default function Router() {
         element={<Landing />}
       />
       <Route
-        path="/url-shortener"
+        path="/shortener"
         element={<Shortener />}
       />
     </Routes>

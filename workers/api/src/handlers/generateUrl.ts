@@ -7,7 +7,6 @@ export async function generateUrl(ctx: Context) {
   console.log(reqJSON.url);
 
   // save id to KV
-  
 
   ctx.response.body = JSON.stringify({ id });
 }
