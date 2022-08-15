@@ -20,7 +20,7 @@ const Shortener: () => JSX.Element = () => {
       })
     }
 
-    fetch("http://localhost:8787/generate", opts)
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/generate`, opts)
       .then(async (res) => {
         let json: { id: string } = await res.json();
         setShortenedUrl(`http://localhost:3000/u/${json.id}`);
