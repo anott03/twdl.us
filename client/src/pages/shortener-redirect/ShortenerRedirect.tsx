@@ -19,7 +19,7 @@ const ShortenerRedirect: () => JSX.Element = () => {
       body: JSON.stringify({ id })
     }
 
-    fetch(`${process.env.REACT_APP_API_ENDPOINT/url`, opts)
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/url`, opts)
       .then(async (res) => {
         let json: { redirectUrl: string } = await res.json();
 
