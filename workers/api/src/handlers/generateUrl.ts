@@ -7,6 +7,8 @@ export async function generateUrl(ctx: Context) {
   console.log(reqJSON.url);
 
   // save id to KV
+  ctx.env.SHORTENER_STORE.put(id, reqJSON.url);
+  console.log("GET FROM KV", ctx.env.SHORTENER_STORE.get(id));
 
   ctx.response.body = JSON.stringify({ id });
 }
