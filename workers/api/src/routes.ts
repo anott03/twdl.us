@@ -1,6 +1,7 @@
 import { Context, Router } from "sunder";
 import { Env } from "./bindings";
 import { generateUrl } from "./handlers/generateUrl";
+import { getUrl } from "./handlers/getUrl";
 
 export function registerRoutes(router: Router<Env>) {
     router.get("/robots.txt", (ctx) => {
@@ -19,4 +20,5 @@ export function registerRoutes(router: Router<Env>) {
     })
 
     router.post("/generate", generateUrl);
+    router.post("/url", getUrl);
 }

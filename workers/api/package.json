@@ -33,8 +33,8 @@
     "dependencies": {
         "@cloudflare/kv-asset-handler": "^0.2.0",
         "@popeindustries/lit-html-server": "^3.1.0",
-        "@types/uuid": "^8.3.4",
-        "sunder": "^0.10.1",
-        "uuid": "^8.3.2"
+        "@types/nanoid": "^3.0.0",
+        "nanoid": "^4.0.0",
+        "sunder": "^0.10.1"
     }
 }
