@@ -2,9 +2,11 @@ import { fuzzy_bubbles_bold as fbb } from "@/styles/fonts";
 
 function Square({ width, height, className, color, transform }: { width: number, height: number, color: string, transform?: string, className?: string }) {
     return (
-        <svg width={width} height={height} className={className} transform={transform}>
-            <rect width={width} height={height} className={color}/>
-        </svg>
+        <div className={className + " block overflow-visible"} data-type="shape" style={{ width, height, rotate: "z 45deg"}}>
+            <svg width={"100%"} height={"100%"}>
+                <rect width={width} height={height} className={color}/>
+            </svg>
+        </div>
     );
 }
 
