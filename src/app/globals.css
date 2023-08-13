@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-fuzzy {
+    font-family: var(--font-fuzzy-bubbles);
+    font-weight: 400;
+}
