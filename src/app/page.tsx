@@ -35,7 +35,7 @@ export default function Home() {
                 <div className="flex flex-col justify-center items-center">
                     <h1 className={"text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-1 to-red-1 " + fbb.className}>Hello</h1>
                     <p className="text-xl text-slate-3">Welcome to my little corner of the internet!</p>
-                    <p className="text-slate-3 px-12 md:px-32 pt-3">This page is where I test ideas out, have fun, and make a mess. You've been warned.</p>
+                    <p className="text-slate-3 px-12 md:px-32 pt-3">{"This page is where I test ideas out, have fun, and make a mess. You've been warned."}</p>
                 </div>
             </div>
         </div>
