@@ -2,9 +2,6 @@
 
 import { fuzzy_bubbles_bold as fbb } from "@/styles/fonts";
 import { Square, Circle, Triangle } from "@/components/shapes";
-import { Menu } from "@/components/icons";
-import { useState } from "react";
-import Link from "next/link";
 
 function SwankyButton({ onClick, children, className }: any) {
     return (
@@ -13,8 +10,6 @@ function SwankyButton({ onClick, children, className }: any) {
 }
 
 export default function Home() {
-  let [ e, se ] = useState(false);
-
   return (
     <main className="w-screen h-screen flex flex-row justify-center bg-pink-2 p-3 overflow-hidden">
         <div className="max-w-[800px] w-full h-full flex flex-col justify-center items-center p-3 relative">
@@ -22,14 +17,6 @@ export default function Home() {
             <Circle radius={50} color="fill-purple-1" className="absolute -bottom-12 right-16" />
             <Triangle width={100} height={100} color="fill-blue-4" className="absolute -right-4 opacity-70 md:opacity-100 duration-500" rotate="z -60deg"/>
             <Triangle width={75} height={75} color="fill-green-1" className="absolute bottom-12 left-4" rotate="z 60deg"/>
-
-            <div className={`absolute top-0 right-0 flex flex-row justify-between rounded-lg text-slate-3 z-20 min-w-0 duration-500 transition-all delay-0 ${e ? "min-w-full bg-purple-1" : ""}`}>
-                <div className="flex flex-row gap-5 items-center p-3">
-                    { e && <><Link className="" href="https://me.twdl.us">About Me</Link>
-                    <Link className="" href="https://me.twdl.us">URL Shortener</Link> </> }
-                </div>
-                <SwankyButton onClick={() => se(!e)}>Menu <Menu /></SwankyButton>
-            </div>
 
             <div className="flex flex-col flex-1 justify-center items-center text-center z-10">
                 <div className="flex flex-col justify-center items-center">
