@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@plugin "@tailwindcss/typography";
+
 .font-fuzzy {
     font-family: var(--font-fuzzy-bubbles);
     font-weight: 400;
