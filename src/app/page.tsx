@@ -5,7 +5,7 @@ import { Square, Circle, Triangle } from "@/components/shapes";
 
 function SwankyButton({ onClick, children, className }: any) {
     return (
-        <button className={"p-3 px-5 bg-purple-1 rounded-lg flex flex-row gap-3 hover:bg-gradient-to-br hover:from-purple-1 hover:to-pink-1 transition-all duration-200 " + className} onClick={onClick}>{children}</button>
+        <button className={"p-3 px-5 bg-purple-1 rounded-lg flex flex-row gap-3 hover:bg-linear-to-br hover:from-purple-1 hover:to-pink-1 transition-all duration-200 " + className} onClick={onClick}>{children}</button>
     );
 }
 
@@ -20,7 +20,7 @@ export default function Home() {
 
             <div className="flex flex-col flex-1 justify-center items-center text-center z-10">
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className={"text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-1 to-red-1 " + fbb.className}>Hello</h1>
+                    <h1 className={"text-5xl font-bold text-transparent bg-clip-text bg-linear-to-br from-purple-1 to-red-1 " + fbb.className}>Hello</h1>
                     <p className="text-xl text-slate-3">Welcome to my little corner of the internet!</p>
                     <p className="text-slate-3 px-12 md:px-32 pt-3">{"This page is where I test ideas out, have fun, and make a mess. You've been warned."}</p>
                 </div>

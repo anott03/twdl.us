@@ -1,6 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 4rem;
+  --text-7xl: 5rem;
+
+  --color-purple-1: #c8b6ea;
+
+  --color-pink-1: #eab6d0;
+  --color-pink-2: #ede1fe;
+  --color-pink-3: #efe4fe;
+  --color-pink-4: #f0e6fe;
+
+  --color-red-1: #ff9999;
+  --color-red-2: #ffa2a2;
+  --color-red-3: #ffaaaa;
+  --color-red-4: #ffb2b2;
+
+  --color-melon-1: #ffb6a3;
+
+  --color-green-1: #bcdda7;
+
+  --color-blue-1: #81c8be;
+  --color-blue-2: #8ccdc4;
+  --color-blue-3: #96d2c9;
+  --color-blue-4: #a0d6ce;
+
+  --color-slate-1: #3d405b;
+  --color-slate-2: #4f516a;
+  --color-slate-3: #5f6178;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 .font-fuzzy {
     font-family: var(--font-fuzzy-bubbles);
